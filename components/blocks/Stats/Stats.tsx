@@ -49,7 +49,8 @@ const stats: StatItem[] = [
 
 export const Stats = () => {
     return (
-        <section className="flex w-full items-center justify-center bg-button px-4 py-20 md:py-24">
+        // <section className="flex w-full items-center justify-center bg-button px-4 py-20 md:py-24">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-button px-4 py-20 md:py-24">
             <div className="flex w-full max-w-7xl flex-col items-center gap-14">
                 <div className="flex flex-col items-center gap-3 text-center">
                     <h2 className="text-md font-semibold uppercase tracking-[0.18em] text-button-foreground">

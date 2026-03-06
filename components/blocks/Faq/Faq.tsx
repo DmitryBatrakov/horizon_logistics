@@ -58,32 +58,26 @@ export const Faq = () => {
                     </p>
                 </div>
 
-                <Reveal
-                    delayNumber={0.15}
-                    duration={0.25}
-                    className="border-border py-1"
+                <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full rounded-xl border bg-white px-6 py-4 md:px-8"
                 >
-                    <Accordion
-                        type="single"
-                        collapsible
-                        className="w-full rounded-xl border bg-white px-6 py-4 md:px-8"
-                    >
-                        {faqItems.map((item, index) => (
-                            <AccordionItem
-                                key={item.question}
-                                value={`item-${index + 1}`}
-                                className="border-border py-1"
-                            >
-                                <AccordionTrigger className="text-base font-semibold text-button hover:no-underline md:text-lg">
-                                    {item.question}
-                                </AccordionTrigger>
-                                <AccordionContent className="text-sm leading-6 text-button/80 md:text-base">
-                                    {item.answer}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
-                </Reveal>
+                    {faqItems.map((item, index) => (
+                        <AccordionItem
+                            key={item.question}
+                            value={`item-${index + 1}`}
+                            className="border-border py-1"
+                        >
+                            <AccordionTrigger className="text-base font-semibold text-button hover:no-underline md:text-lg">
+                                {item.question}
+                            </AccordionTrigger>
+                            <AccordionContent className="text-sm leading-6 text-button/80 md:text-base">
+                                {item.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
             </Reveal>
         </section>
     );

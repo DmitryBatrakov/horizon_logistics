@@ -41,7 +41,7 @@ const processSteps: ProcessStep[] = [
 export const Process = () => {
     return (
         <section
-            className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 scroll-mt-28"
+            className="relative flex min-h-screen w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 scroll-mt-28"
             id="process"
         >
             <div className="flex w-full max-w-7xl flex-col items-center gap-12">
