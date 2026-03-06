@@ -15,9 +15,11 @@ import Link from "next/link";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 
 const links = [
-    { href: "/services", label: "Services" },
-    { href: "/", label: "About Us" },
-    { href: "/", label: "FAQ" },
+    { href: "/#services", label: "Services" },
+    { href: "/#about-us", label: "About Us" },
+    { href: "/#faq", label: "FAQ" },
+    { href: "/#contact", label: "Request a Quote" },
+    { href: "/#process", label: "Our Process" },
 ];
 
 export const MobileNav = () => {
