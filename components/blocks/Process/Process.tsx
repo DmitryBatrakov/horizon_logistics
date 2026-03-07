@@ -1,5 +1,7 @@
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
+import { getTranslations } from "next-intl/server";
 import { CheckCircle2, ClipboardList, PhoneCall, Truck } from "lucide-react";
+import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 
 type ProcessStep = {
     number: string;
@@ -8,55 +10,52 @@ type ProcessStep = {
     icon: React.ComponentType<{ className?: string }>;
 };
 
-const processSteps: ProcessStep[] = [
-    {
-        number: "01",
-        title: "Get In Touch",
-        description:
-            "Call us or fill out the request form with details about your project.",
-        icon: PhoneCall,
-    },
-    {
-        number: "02",
-        title: "Customized Plan",
-        description:
-            "We assess your needs and deliver a tailored quote within 24 hours.",
-        icon: ClipboardList,
-    },
-    {
-        number: "03",
-        title: "Our Team Arrives On-Site",
-        description:
-            "Our trained crews arrive on-site, fully equipped and ready to work.",
-        icon: Truck,
-    },
-    {
-        number: "04",
-        title: "Work Completed",
-        description: "Quality-checked results delivered on time, every time.",
-        icon: CheckCircle2,
-    },
-];
+export const Process = async () => {
+    const t = await getTranslations("process");
+    const processSteps: ProcessStep[] = [
+        {
+            number: "01",
+            title: t("steps.step1.title"),
+            description: t("steps.step1.description"),
+            icon: PhoneCall,
+        },
+        {
+            number: "02",
+            title: t("steps.step2.title"),
+            description: t("steps.step2.description"),
+            icon: ClipboardList,
+        },
+        {
+            number: "03",
+            title: t("steps.step3.title"),
+            description: t("steps.step3.description"),
+            icon: Truck,
+        },
+        {
+            number: "04",
+            title: t("steps.step4.title"),
+            description: t("steps.step4.description"),
+            icon: CheckCircle2,
+        },
+    ];
 
-export const Process = () => {
     return (
         <section
-            className="relative flex min-h-screen w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 scroll-mt-28"
+            className="relative flex min-h-screen w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 "
             id="process"
         >
             <div className="flex w-full max-w-7xl flex-col items-center gap-12">
-                <Reveal className="flex flex-col items-center gap-3 text-center">
+                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col items-center gap-3 text-center">
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
-                        our process
+                        {t("eyebrow")}
                     </h2>
                     <p className="text-4xl font-bold text-button md:text-6xl">
-                        How We Work
+                        {t("title")}
                     </p>
                     <p className="max-w-2xl text-base text-button/70">
-                        A simple transparent process from first contact to
-                        project completion.
+                        {t("description")}
                     </p>
-                </Reveal>
+                </SplitLinesReveal>
 
                 <div className="relative grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
                     <div className="absolute left-[12.5%] right-[12.5%] top-7 hidden h-px bg-button/15 xl:block" />

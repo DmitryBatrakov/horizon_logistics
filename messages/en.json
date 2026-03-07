@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "title": "Horizon Logistics",
+    "description": "Container unloading, workforce staffing, and warehouse maintenance for logistics operations."
+  },
+  "brand": {
+    "first": "horizon",
+    "second": "logistics"
+  },
+  "header": {
+    "links": {
+      "services": "Services",
+      "aboutUs": "About Us",
+      "process": "Work Process"
+    },
+    "contactCta": "Contact Us"
+  },
+  "mobileNav": {
+    "openMenuAriaLabel": "Open menu",
+    "title": "Menu",
+    "subtitle": "Navigate through Horizon Logistics",
+    "links": {
+      "services": "Services",
+      "aboutUs": "About Us",
+      "faq": "FAQ",
+      "requestQuote": "Request a Quote",
+      "process": "Our Process"
+    },
+    "close": "Close"
+  },
+  "hero": {
+    "titlePrefix": "trusted logistics partner",
+    "titleLine1": "Powering your",
+    "titleLine2": "Supply Chain",
+    "description": "Container unloading, workforce staffing and warehouse maintenance - all under one roof",
+    "cta": "Get a Quote",
+    "backgroundAlt": "Hero background image"
+  },
+  "aboutUs": {
+    "eyebrow": "who we are",
+    "title": "About Us",
+    "description": "We provide professional services in container unloading, warehouse maintenance, and workforce supply for factories and logistics centers. Our experienced teams ensure that every task is completed safely, efficiently, and on time. We understand the importance of reliable logistics operations, which is why we focus on quality, responsibility, and well-organized workflows. Our goal is to help businesses operate smoothly, reduce operational delays, and maintain stable productivity in their daily processes.",
+    "imageAlt": "About Us Image",
+    "stats": {
+      "experience": "Years of experience",
+      "containersMonthly": "Containers unloaded monthly",
+      "workers": "Workers in our team",
+      "partners": "Partner companies"
+    }
+  },
+  "ourServices": {
+    "eyebrow": "what we do",
+    "title": "Our Services",
+    "learnMore": "Learn More",
+    "items": {
+      "containerUnloading": {
+        "title": "Container Unloading",
+        "description": "We unload containers from ships and trucks, ensuring that your goods are unloaded safely and efficiently."
+      },
+      "workforceStaffing": {
+        "title": "Workforce Staffing",
+        "description": "We staff your workforce with the best workers in the industry, ensuring that your goods are unloaded safely and efficiently."
+      },
+      "warehouseMaintenance": {
+        "title": "Warehouse Maintenance",
+        "description": "We maintain your warehouse, ensuring that your goods are stored safely and efficiently."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "our process",
+    "title": "How We Work",
+    "description": "A simple transparent process from first contact to project completion.",
+    "steps": {
+      "step1": {
+        "title": "Get In Touch",
+        "description": "Call us or fill out the request form with details about your project."
+      },
+      "step2": {
+        "title": "Customized Plan",
+        "description": "We assess your needs and deliver a tailored quote within 24 hours."
+      },
+      "step3": {
+        "title": "Our Team Arrives On-Site",
+        "description": "Our trained crews arrive on-site, fully equipped and ready to work."
+      },
+      "step4": {
+        "title": "Work Completed",
+        "description": "Quality-checked results delivered on time, every time."
+      }
+    }
+  },
+  "stats": {
+    "eyebrow": "by the numbers",
+    "title": "Company Statistics",
+    "items": {
+      "containersUnloaded": "Containers Unloaded",
+      "teamMembers": "Team members",
+      "facilitiesServiced": "Warehouse & Facilities serviced",
+      "citiesCovered": "Cities Covered",
+      "completedOrders": "Completed Orders",
+      "yearsExperience": "Years of industry experience"
+    }
+  },
+  "contactUs": {
+    "eyebrow": "get started",
+    "title": "Request a Quote",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "serviceType": "Service Type",
+      "servicePlaceholder": "Select a service",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your request",
+      "serviceContainerUnloading": "Container Unloading",
+      "serviceWorkforceStaffing": "Workforce Staffing",
+      "serviceWarehouseMaintenance": "Warehouse Maintenance"
+    },
+    "submit": "Submit Request"
+  },
+  "faq": {
+    "eyebrow": "questions",
+    "title": "Frequently Asked Questions",
+    "items": {
+      "servicesQuestion": "What services does your company provide?",
+      "servicesAnswer": "We provide container unloading services in ports, warehouse cleaning and maintenance, and workforce supply for factories, warehouses, and logistics centers.",
+      "workersQuestion": "How quickly can you provide workers?",
+      "workersAnswer": "In most cases we can provide workers within a short time depending on the project size. Our team is flexible and ready to scale according to your operational needs.",
+      "contractsQuestion": "Do you work with long-term contracts?",
+      "contractsAnswer": "Yes, we work with both short-term and long-term contracts. Many of our partners use our services on a regular basis for continuous logistics operations.",
+      "trainedQuestion": "Are your workers trained and experienced?",
+      "trainedAnswer": "Yes, all workers are trained and experienced in logistics operations, container unloading, and warehouse work. Safety and efficiency are our top priorities.",
+      "factoriesQuestion": "Do you work with factories and logistics centers?",
+      "factoriesAnswer": "Yes, we cooperate with factories, warehouses, logistics hubs, and distribution centers that require reliable workforce and operational support.",
+      "requestQuestion": "How can we request your services?",
+      "requestAnswer": "You can contact us through the website form or by phone. Our team will quickly review your request and provide the best solution for your business needs."
+    }
+  },
+  "footer": {
+    "description": "Your trusted partner for port operations, workforce solutions, and facility maintenance.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "links": {
+      "services": "Services",
+      "aboutUs": "About Us",
+      "faq": "FAQ",
+      "contact": "Contact us",
+      "process": "Work Process"
+    },
+    "copyright": "© 2026 Horizon Logistics. All rights reserved.",
+    "contactItems": {
+      "phone": "+1 (555) 123-4567",
+      "email": "info@horizonlogistics.com",
+      "address": "1200 Harbor Blvd, Suite 300, Long Beach, CA"
+    }
+  }
+}
