@@ -13,21 +13,23 @@ import { ArrowRight, Menu } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
-
-const links = [
-    { href: "/#services", label: "Services" },
-    { href: "/#about-us", label: "About Us" },
-    { href: "/#faq", label: "FAQ" },
-    { href: "/#contact", label: "Request a Quote" },
-    { href: "/#process", label: "Our Process" },
-];
+import { useTranslations } from "next-intl";
 
 export const MobileNav = () => {
+    const t = useTranslations();
+    const links = [
+        { href: "/#services", label: t("mobileNav.links.services") },
+        { href: "/#about-us", label: t("mobileNav.links.aboutUs") },
+        { href: "/#faq", label: t("mobileNav.links.faq") },
+        { href: "/#contact", label: t("mobileNav.links.requestQuote") },
+        { href: "/#process", label: t("mobileNav.links.process") },
+    ];
+
     return (
         <Drawer direction="top">
             <DrawerTrigger
                 className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-button-foreground/40 text-button-foreground transition-colors hover:bg-button-foreground/10"
-                aria-label="Open menu"
+                aria-label={t("mobileNav.openMenuAriaLabel")}
             >
                 <Menu className="size-5" />
             </DrawerTrigger>
@@ -35,10 +37,10 @@ export const MobileNav = () => {
             <DrawerContent className="min-h-screen border-none bg-button text-white">
                 <DrawerHeader className="px-5 pt-6 pb-3">
                     <DrawerTitle className="text-left text-white text-2xl font-bold tracking-tight">
-                        Menu
+                        {t("mobileNav.title")}
                     </DrawerTitle>
                     <p className="text-left text-sm text-button-foreground">
-                        Navigate through Horizon Logistics
+                        {t("mobileNav.subtitle")}
                     </p>
                     <Separator className="mt-4 bg-white/20" />
                 </DrawerHeader>
@@ -64,7 +66,7 @@ export const MobileNav = () => {
                 <DrawerFooter className="mt-auto p-4">
                     <DrawerClose asChild>
                         <AnimatedButton
-                            text="Close"
+                            text={t("mobileNav.close")}
                             className="w-full uppercase font-bold border-white/30 bg-transparent text-white hover:bg-white/10 active:scale-[0.98]"
                         />
                     </DrawerClose>

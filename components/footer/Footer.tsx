@@ -1,21 +1,35 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-const quickLinks = [
-    { href: "/#services", label: "Services" },
-    { href: "/#about-us", label: "About Us" },
-    { href: "/#faq", label: "FAQ" },
-    { href: "/#contact", label: "Contact us" },
-    { href: "/#process", label: "Work Process" },
-];
+export const Footer = async () => {
+    const t = await getTranslations();
+    const quickLinks = [
+        { href: "/#services", label: t("footer.links.services") },
+        { href: "/#about-us", label: t("footer.links.aboutUs") },
+        { href: "/#faq", label: t("footer.links.faq") },
+        { href: "/#contact", label: t("footer.links.contact") },
+        { href: "/#process", label: t("footer.links.process") },
+    ];
 
-const contactItems = [
-    { icon: Phone, text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: Mail, text: "info@horizonlogistics.com", href: "mailto:info@horizonlogistics.com" },
-    { icon: MapPin, text: "1200 Harbor Blvd, Suite 300, Long Beach, CA", href: "#" },
-];
+    const contactItems = [
+        {
+            icon: Phone,
+            text: t("footer.contactItems.phone"),
+            href: "tel:+15551234567",
+        },
+        {
+            icon: Mail,
+            text: t("footer.contactItems.email"),
+            href: "mailto:info@horizonlogistics.com",
+        },
+        {
+            icon: MapPin,
+            text: t("footer.contactItems.address"),
+            href: "#",
+        },
+    ];
 
-export const Footer = () => {
     return (
         <footer className="flex w-full items-center justify-center bg-button px-4 py-12 md:py-14">
             <div className="w-full max-w-7xl">
@@ -23,19 +37,18 @@ export const Footer = () => {
                     <div className="space-y-4">
                         <div className="text-3xl font-semibold uppercase leading-none">
                             <span className="font-bold text-button-foreground">
-                                horizon
+                                {t("brand.first")}
                             </span>
-                            <span className="text-white">logistics</span>
+                            <span className="text-white">{t("brand.second")}</span>
                         </div>
                         <p className="max-w-sm text-sm leading-7 text-white/65">
-                            Your trusted partner for port operations, workforce
-                            solutions, and facility maintenance.
+                            {t("footer.description")}
                         </p>
                     </div>
 
                     <div className="space-y-3">
                         <h3 className="text-xl font-semibold text-white">
-                            Quick Links
+                            {t("footer.quickLinks")}
                         </h3>
                         <ul className="space-y-2">
                             {quickLinks.map((item) => (
@@ -53,7 +66,7 @@ export const Footer = () => {
 
                     <div className="space-y-3">
                         <h3 className="text-xl font-semibold text-white">
-                            Contact
+                            {t("footer.contact")}
                         </h3>
                         <ul className="space-y-3">
                             {contactItems.map((item) => (
@@ -75,7 +88,7 @@ export const Footer = () => {
 
                 <div className="mt-10 border-t border-white/10 pt-7 text-center">
                     <p className="text-sm text-white/55">
-                        © 2026 Horizon Logistics. All rights reserved.
+                        {t("footer.copyright")}
                     </p>
                 </div>
             </div>

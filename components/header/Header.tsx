@@ -1,21 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
-import { SectionId, useSectionNavigation } from "@/hooks/useSectionNavigation";
-import { cn } from "@/lib/utils";
+import { cn, scrollToSection } from "@/lib/utils";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { MobileNav } from "../mobile-nav/MobileNav";
+import { LocaleSwitcher } from "../locale-switcher/locale-switcher";
 
-const navLinks: { id: SectionId; label: string }[] = [
-    { id: "services", label: "Services" },
-    { id: "about-us", label: "About Us" },
-    { id: "process", label: "Work Process" },
-];
+type SectionId = "services" | "about-us" | "process" | "contact" | "faq";
 
 export const Header = () => {
+    const t = useTranslations();
     const direction = useScrollDirection();
-    const { activeSection, scrollToSection } = useSectionNavigation();
+
+
+    const navLinks: { id: SectionId; label: string }[] = [
+        { id: "services", label: t("header.links.services") },
+        { id: "about-us", label: t("header.links.aboutUs") },
+        { id: "process", label: t("header.links.process") },
+    ];
 
     return (
         <header
@@ -30,9 +34,11 @@ export const Header = () => {
                     className="flex items-center justify-center text-2xl uppercase"
                 >
                     <span className="font-bold text-button-foreground">
-                        horizon
+                        {t("brand.first")}
                     </span>
-                    <span className="font-semibold text-white">logistics</span>
+                    <span className="font-semibold text-white">
+                        {t("brand.second")}
+                    </span>
                 </Link>
                 <div className="flex items-center justify-center gap-15">
                     {navLinks.map((link) => (
@@ -46,9 +52,10 @@ export const Header = () => {
                         </button>
                     ))}
                 </div>
-                <div>
+                <div className="flex items-center justify-center gap-5">
+                    <LocaleSwitcher />
                     <AnimatedButton
-                        text={"Contact Us"}
+                        text={t("header.contactCta")}
                         onClick={() => {
                             scrollToSection("contact");
                         }}
@@ -58,9 +65,11 @@ export const Header = () => {
             <div className="flex md:hidden items-center justify-between w-full px-4">
                 <div className="flex items-center justify-center text-2xl uppercase">
                     <span className="font-bold text-button-foreground">
-                        horizon
+                        {t("brand.first")}
                     </span>
-                    <span className="font-semibold text-white">logistics</span>
+                    <span className="font-semibold text-white">
+                        {t("brand.second")}
+                    </span>
                 </div>
                 <MobileNav />
             </div>
