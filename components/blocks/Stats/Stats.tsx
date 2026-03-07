@@ -53,10 +53,10 @@ export const Stats = async () => {
 
     return (
         // <section className="flex w-full items-center justify-center bg-button px-4 py-20 md:py-24">
-        <section className="relative flex min-h-screen w-full items-center justify-center bg-button px-4 py-20 md:py-24">
-            <div className="flex w-full max-w-7xl flex-col items-center gap-14">
-                <SplitLinesReveal stagger={0.2} className="flex flex-col items-center gap-3 text-center">
-                    <h2 className="text-md font-semibold uppercase tracking-[0.18em] text-button-foreground">
+        <section className="relative flex  w-full items-center justify-center bg-button px-4 py-20 md:py-24">
+            <div className="flex w-full max-w-7xl flex-col items-start gap-20">
+                <SplitLinesReveal stagger={0.2} className="flex flex-col items-center justify-center md:items-start md:justify-start gap-3">
+                    <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
                     </h2>
                     <p className="text-4xl font-bold text-white md:text-6xl">

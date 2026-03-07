@@ -45,19 +45,19 @@ export const OurServices = async () => {
 
     return (
         <section
-            className="flex items-center justify-center w-full "
+            className="flex items-center justify-center w-full bg-white"
             id="services"
         >
-            <div className="flex flex-col items-center justify-center max-w-7xl w-full gap-20 px-4 py-20 md:py-30">
-                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col gap-2 items-center justify-start h-full">
-                    <h2 className="text-md font-semibold uppercase text-button-foreground">
+            <div className="flex flex-col items-center justify-center md:items-start md:justify-start max-w-7xl w-full gap-20 px-4 py-20 md:py-28">
+                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col gap-2 items-center justify-center md:items-left md:justify-start h-full">
+                    <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
                         {t("eyebrow")}
                     </h2>
                     <p className=" text-5xl md:text-6xl text-button font-bold">
                         {t("title")}
                     </p>
                 </SplitLinesReveal>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  mx-auto">
                     {services.map((s,index) => (
                         <Reveal  key={s.title} index={index} delayNumber={0.2} delay={0.3} duration={0.25}>
                             <Card

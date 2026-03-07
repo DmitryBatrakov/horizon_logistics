@@ -7,6 +7,7 @@
 :root {
     --button: #003b49;
     --button-foreground: #ffbf00;
+    /* --button-foreground: #ff7d44; */
 
     --primary: oklch(0.205 0 0);
     --secondary: oklch(0.97 0 0);

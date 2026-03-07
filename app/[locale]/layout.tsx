@@ -41,7 +41,9 @@ export default async function RootLayout({
                 <NextIntlClientProvider>
                     <Header />
                     <main>{children}</main>
-                    <Footer />
+                    <div className="sticky bottom-0 z-0">
+                        <Footer />
+                    </div>
                 </NextIntlClientProvider>
                 <Toaster richColors position="top-center" />
             </body>

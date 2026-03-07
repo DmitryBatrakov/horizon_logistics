@@ -67,6 +67,37 @@
       }
     }
   },
+  "whyUs": {
+    "eyebrow": "why us",
+    "title": "Why Choose Us",
+    "description": "We combine decades of industry expertise with a relentless focus on safety, speed, and customer satisfaction.",
+    "items": {
+      "safety": {
+        "title": "Proven Safety Record",
+        "description": "99.8% incident-free operations across all sites and services."
+      },
+      "rapidDeployment": {
+        "title": "Rapid Deployment",
+        "description": "Crews on-site within 24-48 hours of confirmation."
+      },
+      "dedicatedSupport": {
+        "title": "Dedicated Support",
+        "description": "A personal account manager for every client, available around the clock."
+      },
+      "scalableSolutions": {
+        "title": "Scalable Solutions",
+        "description": "From 10 workers to 500 - we scale seamlessly with your demand."
+      },
+      "onTimeGuarantee": {
+        "title": "On-Time Guarantee",
+        "description": "We meet deadlines every time, no excuses."
+      },
+      "trustedByLeaders": {
+        "title": "Trusted by Leaders",
+        "description": "Serving Fortune 500 companies, port authorities, and major manufacturers."
+      }
+    }
+  },
   "process": {
     "eyebrow": "our process",
     "title": "How We Work",
