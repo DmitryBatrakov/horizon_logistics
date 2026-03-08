@@ -192,8 +192,9 @@
             "titleHero": "Container Unloading",
             "subtitleHero": "Efficient port-side container unloading with trained crews and modern equipment",
             "titleService": "Professional Port Operations",
-            "descriptionService": "Our container unloading service covers the full lifecycle of cargo discharge — from vessel berthing coordination to last-mile drayage. We deploy seasoned dock workers equipped with reach stackers, forklifts, and gantry cranes to ensure every container is handled swiftly and safely. Whether you're dealing with 20-ft dry containers, refrigerated units, or flat-rack shipments, our crews adapt to your cargo profile. We maintain an impeccable safety record and provide real-time updates so you always know the status of your goods.",
-            "titleList": "Safe and Efficient Handling",
+            "descriptionService": "Our container unloading service covers the full lifecycle of cargo discharge — from vessel berthing coordination to last-mile drayage. We deploy seasoned dock workers equipped with reach stackers, forklifts, and gantry cranes to ensure every container is handled swiftly and safely.",
+            "descriptionService2": "Whether you're dealing with 20-ft dry containers, refrigerated units, or flat-rack shipments, our crews adapt to your cargo profile. We maintain an impeccable safety record and provide real-time updates so you always know the status of your goods.",
+            "titleList": "What We Offer",
             "listItems": [
                 "24/7 port-side operations with trained crews",
                 "Heavy-lift equipment for oversized cargo",
@@ -207,7 +208,8 @@
             "titleHero": "Factory Staffing",
             "subtitleHero": "Reliable workforce solutions for manufacturing plants, tailored to your production needs.",
             "titleService": "Workforce You Can Count On",
-            "descriptionService": "Finding dependable factory workers shouldn't slow down your production. We recruit, screen, and deploy skilled laborers who are ready to integrate into your operations from day one. From assembly lines to quality inspection, we staff every role on the floor.\n\nOur staffing coordinators work closely with your plant managers to understand shift patterns, skill requirements, and safety protocols. Whether you need 10 workers or 200, we scale with your business - no long-term contracts required.",
+            "descriptionService": "Finding dependable factory workers shouldn't slow down your production. We recruit, screen, and deploy skilled laborers who are ready to integrate into your operations from day one. From assembly lines to quality inspection, we staff every role on the floor.",
+            "descriptionService2": "Our staffing coordinators work closely with your plant managers to understand shift patterns, skill requirements, and safety protocols. Whether you need 10 workers or 200, we scale with your business - no long-term contracts required.",
             "titleList": "What We Offer",
             "listItems": [
                 "Pre-screened and vetted industrial workers",
@@ -222,7 +224,8 @@
             "titleHero": "Warehouse Cleaning",
             "subtitleHero": "Professional cleaning services that keep your storage facilities safe and operational.",
             "titleService": "Spotless Facilities, Every Time",
-            "descriptionService": "A clean warehouse isn't just about appearance - it's about safety, efficiency, and compliance. Our trained cleaning crews tackle everything from daily floor maintenance to full-facility deep cleans, ensuring your space meets the highest operational standards.\n\nWe use industrial-grade scrubbers, pressure washers, and eco-friendly cleaning agents to handle grease, dust, debris, and spills. Whether it's a 5,000 sq ft storage room or a 200,000 sq ft distribution center, we have the crew and the gear to get it done.",
+            "descriptionService": "A clean warehouse isn't just about appearance - it's about safety, efficiency, and compliance. Our trained cleaning crews tackle everything from daily floor maintenance to full-facility deep cleans, ensuring your space meets the highest operational standards.",
+            "descriptionService2:": "We use industrial-grade scrubbers, pressure washers, and eco-friendly cleaning agents to handle grease, dust, debris, and spills. Whether it's a 5,000 sq ft storage room or a 200,000 sq ft distribution center, we have the crew and the gear to get it done.",
             "titleList": "What We Offer",
             "listItems": [
                 "Daily maintenance and deep cleaning programs",

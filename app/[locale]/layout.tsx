@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
 import { Footer } from "@/components/footer/Footer";
-import { FooterPosition } from "@/components/footer/FooterPosition";
 import { Header } from "@/components/header/Header";
 import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from "next-intl";
@@ -15,6 +14,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+    variable: "--font-open-sans",
     subsets: ["latin"],
 });
 
@@ -37,14 +41,14 @@ export default async function RootLayout({
     return (
         <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased`}
             >
                 <NextIntlClientProvider>
                     <Header />
                     <main>{children}</main>
-                    <FooterPosition>
+                    <section className="sticky bottom-0 z-0">
                         <Footer />
-                    </FooterPosition>
+                    </section>
                 </NextIntlClientProvider>
                 <Toaster richColors position="top-center" />
             </body>

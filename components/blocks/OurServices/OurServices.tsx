@@ -12,6 +12,7 @@ import { Container, Users, Warehouse, ArrowRight, ArrowLeft } from "lucide-react
 import Link from "next/link";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { useLocale, useTranslations } from "next-intl";
+import { LocaleDirectionArrow } from "@/shared/local-direction-arrow/LocaleDirectionArrow";
 
 type ServicesProps = {
     id: string;
@@ -57,7 +58,7 @@ export const OurServices = () => {
             className="flex items-center justify-center w-full bg-white"
             id="services"
         >
-            <div className="flex flex-col items-center justify-center md:items-start md:justify-start max-w-7xl w-full gap-20 px-4 py-20 md:py-28">
+            <div className="flex flex-col  items-start justify-start max-w-7xl w-full gap-20 px-4 py-20 md:py-28">
                 <SplitLinesReveal
                     stagger={0.2}
                     delay={0.2}
@@ -97,17 +98,7 @@ export const OurServices = () => {
                                         className="flex items-center justify-between gap-1 text-button font-semibold text-sm group-hover:gap-2 group-hover:text-button-foreground transition-all duration-300"
                                     >
                                         <p>{t("learnMore")} </p>
-                                        {locale === "he" ? (
-                                            <ArrowLeft
-                                                size={18}
-                                                className="transition-colors group-hover:text-button-foreground"
-                                            />
-                                        ) : (
-                                            <ArrowRight
-                                                size={18}
-                                                className="transition-colors group-hover:text-button-foreground"
-                                            />
-                                        )}
+                                        <LocaleDirectionArrow className="transition-colors group-hover:text-button-foreground" />
                                     </Link>
                                 </CardFooter>
                             </Card>

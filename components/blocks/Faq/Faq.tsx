@@ -69,12 +69,12 @@ export const Faq = async () => {
                             <AccordionItem
                                 key={item.question}
                                 value={`item-${index + 1}`}
-                                className="border-border py-1"
+                                className="border-border py-1 group"
                             >
-                                <AccordionTrigger className="text-base font-semibold text-button hover:no-underline md:text-lg">
+                                <AccordionTrigger className="px-2 text-base font-semibold text-button hover:no-underline md:text-lg hover:bg-button-foreground hover:text-white transition-all duration-300">
                                     {item.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-sm leading-6 text-button/80 md:text-base">
+                                <AccordionContent className="px-2 text-sm leading-6 text-button/80 md:text-base">
                                     {item.answer}
                                 </AccordionContent>
                             </AccordionItem>

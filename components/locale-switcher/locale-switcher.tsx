@@ -16,7 +16,6 @@ type Locale = "en" | "he";
 
 const LOCALES: readonly Locale[] = ["en", "he"];
 
-/** Подписи для переключателя по локали */
 const LOCALE_LABELS: Record<Locale, string> = {
     en: "EN",
     he: "HE",
@@ -42,9 +41,7 @@ export function LocaleSwitcher() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button
-                    className="min-w-12 gap-1 bg-transparent rounded-mg text-white hover:bg-white/5"
-                >
+                <Button className="min-w-12 gap-1 bg-transparent rounded-md text-white hover:bg-white/5">
                     <span>
                         {LOCALE_LABELS[displayLocale] ??
                             displayLocale.toUpperCase()}
@@ -52,7 +49,7 @@ export function LocaleSwitcher() {
                     <ChevronDownIcon className="size-4" />
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
+            <DropdownMenuContent align="end">
                 {LOCALES.map((loc) => (
                     <DropdownMenuItem
                         key={loc}

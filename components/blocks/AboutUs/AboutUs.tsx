@@ -38,14 +38,14 @@ export const AboutUs = async () => {
     ];
 
     return (
-        <section
+    <section
             id="about-us"
-            className="flex items-center justify-center w-full bg-secondary scroll-mt-5 px-4 py-20 md:py-28"
+            className="flex items-center justify-center w-full bg-secondary  px-4 py-20 md:py-28"
         >
-            <div className="flex flex-col items-center justify-center md:items-start md:justify-start max-w-7xl gap-10 md:gap-15">
+            <div className="flex flex-col items-start:justify-start max-w-7xl gap-10 md:gap-15">
                 <SplitLinesReveal
                     stagger={0.2}
-                    className="flex flex-col gap-2 items-center md:items-left justify-start h-full"
+                    className="flex flex-col gap-2 items-start  justify-start h-full"
                 >
                     <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
                         {t("eyebrow")}
@@ -55,7 +55,7 @@ export const AboutUs = async () => {
                     </p>
                 </SplitLinesReveal>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start justify-center">
                     <Reveal
                         delay={0.2}
                         className="flex flex-col items-center justify-center gap-10"
@@ -69,10 +69,10 @@ export const AboutUs = async () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 auto-rows-fr">
                             {stats.map((stat, index) => (
                                 <Reveal
-                                    delay={0.25}
+                                    delay={0.15}
                                     index={index}
                                     duration={0.15}
-                                    delayNumber={0.15}
+                                    delayNumber={0.05}
                                     key={stat.label}
                                     className="w-full h-full flex"
                                 >

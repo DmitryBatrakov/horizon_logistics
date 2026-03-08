@@ -7,7 +7,6 @@
 :root {
     --button: #003b49;
     --button-foreground: #ffbf00;
-    /* --button-foreground: #ff7d44; */
 
     --primary: oklch(0.205 0 0);
     --secondary: oklch(0.97 0 0);
@@ -48,6 +47,7 @@
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+    --font-open-sans: var(--font-open-sans);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -156,11 +156,13 @@
 @layer base {
     * {
         @apply border-border outline-ring/50;
-        /* scroll-behavior: smooth; */
+        font-family: var(--font-open-sans);
     }
     body {
         @apply bg-background text-foreground;
     }
+    /* body[data-scroll-locked] {
+        margin-right: 0 !important;
+    } */
+    
 }
-
-

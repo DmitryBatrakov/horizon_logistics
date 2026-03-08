@@ -78,11 +78,11 @@ export const Process = async () => {
                                 </span>
                             </div>
 
-                            <div className="flex flex-col items-center justify-start">
-                                <h3 className="text-3xl font-semibold text-button">
+                            <div className="flex flex-col items-center justify-center">
+                                <h3 className="text-3xl font-semibold text-button text-center">
                                     {step.title}
                                 </h3>
-                                <p className="mt-3 max-w-72 text-lg leading-7 text-button/70">
+                                <p className="mt-3 max-w-72 text-lg leading-7 text-button/70 text-center">
                                     {step.description}
                                 </p>
                             </div>

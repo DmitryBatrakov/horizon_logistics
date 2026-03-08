@@ -6,10 +6,12 @@ import { Process } from "@/components/blocks/Process/Process";
 import { OurServices } from "@/components/blocks/OurServices/OurServices";
 import { Stats } from "@/components/blocks/Stats/Stats";
 import { WhyUs } from "@/components/blocks/WhyUs/WhyUs";
+import { HomeScrollHandler } from "@/hooks/useScrollHandler";
 
 export default function Home() {
     return (
         <div className="relative z-10">
+            <HomeScrollHandler />
             <Hero />
             <AboutUs />
 
