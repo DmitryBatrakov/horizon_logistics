@@ -40,19 +40,20 @@ export const AboutUs = async () => {
     return (
         <section
             id="about-us"
-            className="flex items-center justify-center w-full bg-secondary scroll-mt-5 "
+            className="flex items-center justify-center w-full bg-secondary scroll-mt-5 px-4 py-20 md:py-28"
         >
-            <div className="flex flex-col items-center justify-center max-w-7xl py-20 px-4 gap-10 md:gap-20">
-                <div className="flex flex-col items-center justify-center gap-10 px-4">
-                    <SplitLinesReveal stagger={0.2} className="flex flex-col gap-2  items-center justify-start h-full">
-                        <h2 className="text-md font-semibold uppercase text-button-foreground text-center">
-                            {t("eyebrow")}
-                        </h2>
-                        <p className=" text-5xl md:text-6xl text-button font-bold text-center">
-                            {t("title")}
-                        </p>
-                    </SplitLinesReveal>
-                </div>
+            <div className="flex flex-col items-center justify-center md:items-start md:justify-start max-w-7xl gap-10 md:gap-15">
+                <SplitLinesReveal
+                    stagger={0.2}
+                    className="flex flex-col gap-2 items-center md:items-left justify-start h-full"
+                >
+                    <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
+                        {t("eyebrow")}
+                    </h2>
+                    <p className=" text-5xl md:text-6xl text-button font-bold ">
+                        {t("title")}
+                    </p>
+                </SplitLinesReveal>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-center">
                     <Reveal
@@ -61,7 +62,7 @@ export const AboutUs = async () => {
                     >
                         <div>
                             <div className="text-button text-md">
-                            {t("description")}
+                                {t("description")}
                             </div>
                         </div>
 

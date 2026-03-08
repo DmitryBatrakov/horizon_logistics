@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
@@ -31,7 +31,7 @@ export const Footer = async () => {
     ];
 
     return (
-        <footer className="flex w-full items-center justify-center bg-button px-4 py-12 md:py-14">
+        <footer className="relative flex w-full items-center justify-center bg-button px-4 py-12 md:py-14">
             <div className="w-full max-w-7xl">
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
                     <div className="space-y-4">
@@ -39,7 +39,9 @@ export const Footer = async () => {
                             <span className="font-bold text-button-foreground">
                                 {t("brand.first")}
                             </span>
-                            <span className="text-white">{t("brand.second")}</span>
+                            <span className="text-white">
+                                {t("brand.second")}
+                            </span>
                         </div>
                         <p className="max-w-sm text-sm leading-7 text-white/65">
                             {t("footer.description")}

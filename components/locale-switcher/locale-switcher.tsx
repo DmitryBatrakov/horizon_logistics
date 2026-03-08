@@ -43,8 +43,7 @@ export function LocaleSwitcher() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    variant="outline"
-                    className="min-w-12 gap-1 bg-transparent rounded-mg text-white"
+                    className="min-w-12 gap-1 bg-transparent rounded-mg text-white hover:bg-white/5"
                 >
                     <span>
                         {LOCALE_LABELS[displayLocale] ??
