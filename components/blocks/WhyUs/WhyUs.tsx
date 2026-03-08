@@ -52,6 +52,7 @@ export const WhyUs = () => {
             id="why-us"
             className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-24"
         >
+            
             <div className="flex w-full max-w-7xl flex-col items-center gap-12">
                 <SplitLinesReveal
                     stagger={0.18}
@@ -60,7 +61,7 @@ export const WhyUs = () => {
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
                     </h2>
-                    <p className="text-4xl font-bold text-button md:text-6xl pt-2 pb-5">
+                    <p className="text-4xl font-bold text-button md:text-6xl pb-2">
                         {t("title")}
                     </p>
                     <p className="max-w-2xl text-base text-button/70 md:text-lg">
@@ -77,14 +78,14 @@ export const WhyUs = () => {
                             duration={0.25}
                             className="h-full"
                         >
-                            <article className="flex h-full flex-col rounded-2xl border border-border/70 bg-slate-100/75 p-7">
-                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-button-foreground/15">
+                            <article className="flex h-full flex-col rounded-lg border border-border/70 bg-slate-100/75 p-7 shadow-sm shadow-gray-400/50">
+                                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-lg bg-button-foreground/10">
                                     <item.icon className="h-6 w-6 text-button-foreground" />
                                 </div>
-                                <h3 className="text-3xl font-semibold text-button">
+                                <h3 className="text-xl font-semibold text-button">
                                     {item.title}
                                 </h3>
-                                <p className="mt-3 text-lg leading-7 text-button/70">
+                                <p className="mt-3 text-base leading-7 text-button/70">
                                     {item.description}
                                 </p>
                             </article>

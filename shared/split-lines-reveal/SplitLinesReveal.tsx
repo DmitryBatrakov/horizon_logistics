@@ -21,7 +21,7 @@ type SplitLinesRevealProps = {
 export function SplitLinesReveal({
     children,
     className,
-    delay = 0.2,
+    delay = 0,
     duration = 0.8,
     stagger = 0.12,
     trigger = "top 85%",

@@ -54,7 +54,9 @@ export const Stats = async () => {
     return (
         // <section className="flex w-full items-center justify-center bg-button px-4 py-20 md:py-24">
         <section className="relative flex  w-full items-center justify-center bg-button px-4 py-20 md:py-24">
+            
             <div className="flex w-full max-w-7xl flex-col items-start gap-20">
+                
                 <SplitLinesReveal stagger={0.2} className="flex flex-col items-center justify-center md:items-start md:justify-start gap-3">
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
@@ -63,6 +65,7 @@ export const Stats = async () => {
                         {t("title")}
                     </p>
                 </SplitLinesReveal>
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff50_1px,transparent_1px)] bg-size-[24px_24px]" />
 
                 <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                     {stats.map((item, index) => (
@@ -73,7 +76,7 @@ export const Stats = async () => {
                             key={item.label}
                             className="flex flex-col items-center justify-center text-center"
                         >
-                            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+                            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-white/10">
                                 <item.icon className="h-6 w-6 text-button-foreground" />
                             </div>
                             <p className="text-5xl font-bold text-white">

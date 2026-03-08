@@ -49,7 +49,7 @@ export const Process = async () => {
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
                     </h2>
-                    <p className="text-4xl font-bold text-button md:text-6xl">
+                    <p className="text-4xl font-bold text-button md:text-6xl pb-2">
                         {t("title")}
                     </p>
                     <p className="max-w-2xl text-base text-button/70">

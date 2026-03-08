@@ -19,6 +19,7 @@ export const ContactUs = async () => {
             id="contact"
             className="relative flex  w-full flex-col items-center justify-center overflow-hidden bg-button px-4 py-20 md:py-28 "
         >
+            
             <div className="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center gap-15">
                 <SplitLinesReveal
                     stagger={0.2}
@@ -32,6 +33,8 @@ export const ContactUs = async () => {
                         {t("title")}
                     </p>
                 </SplitLinesReveal>
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-white/20 blur-[200px] rounded-full" />
+
                 <div className="flex items-center justify-center w-full">
                     <Card className="w-full max-w-2xl rounded-lg border-0 bg-white py-0 shadow-2xl">
                         <CardContent className="p-6 md:p-8">
