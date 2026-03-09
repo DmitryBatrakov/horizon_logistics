@@ -1,6 +1,7 @@
 import { ServiceType } from "./validation";
 
 export interface EmailPayload {
+    email: string;
     firstName: string;
     lastName: string;
     phone: string;

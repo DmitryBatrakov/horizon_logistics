@@ -9,6 +9,7 @@ export const serviceTypeSchema = z.enum([
 export const localeSchema = z.enum(["en", "he"]);
 
 export const sendEmailSchema = z.object({
+    email: z.email(),
     firstName: z.string().min(1).max(30),
     lastName: z.string().min(1).max(30),
     phone: z.string().min(1).max(15),

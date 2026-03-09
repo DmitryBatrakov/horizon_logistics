@@ -33,9 +33,8 @@ export const ContactUs = async () => {
                         {t("title")}
                     </p>
                 </SplitLinesReveal>
-            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-white/20 blur-[200px] rounded-full" />
 
-                <div className="flex items-center justify-center w-full">
+                <div className="flex items-center justify-center w-full z-10">
                     <Card className="w-full max-w-2xl rounded-lg border-0 bg-white py-0 shadow-2xl">
                         <CardContent className="p-6 md:p-8">
                             <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -117,6 +116,8 @@ export const ContactUs = async () => {
                         </CardContent>
                     </Card>
                 </div>
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-white/20 blur-[200px] rounded-full z-0" />
+
             </div>
         </section>
     );
