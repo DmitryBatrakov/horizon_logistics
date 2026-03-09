@@ -47,7 +47,7 @@ export const Faq = async () => {
             id="faq"
             className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-28 shadow-2xl shadow-black/20"
         >
-            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-15">
+            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-5 lg:gap-15">
                 <SplitLinesReveal
                     stagger={0.2}
                     className="flex flex-col items-center gap-2 "

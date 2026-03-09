@@ -58,7 +58,7 @@ export const OurServices = () => {
             className="flex items-center justify-center w-full bg-white"
             id="services"
         >
-            <div className="flex flex-col  items-start justify-start max-w-7xl w-full gap-20 px-4 py-20 md:py-28">
+            <div className="flex flex-col  items-start justify-start max-w-7xl w-full gap-10 lg:gap-20 px-4 py-20 md:py-28">
                 <SplitLinesReveal
                     stagger={0.2}
                     delay={0.2}

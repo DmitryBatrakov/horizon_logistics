@@ -69,7 +69,7 @@ export const WhyUs = () => {
                     </p>
                 </SplitLinesReveal>
 
-                <div className="grid w-full max-w-6xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                     {items.map((item, index) => (
                         <Reveal
                             key={item.title}

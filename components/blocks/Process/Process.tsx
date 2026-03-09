@@ -44,7 +44,7 @@ export const Process = async () => {
             className="relative flex h-full w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 "
             id="process"
         >
-            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-20">
+            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:gap-20">
                 <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col items-start justify-start gap-12 ">
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}

@@ -46,14 +46,14 @@ export const Stats = async () => {
         },
         {
             value: "10+",
-            label: t("items.yearsExperience"),
+        label: t("items.yearsExperience"),
             icon: CalendarCheck2,
         },
     ];
 
     return (
         <section className="relative flex  w-full items-center justify-center bg-button px-4 py-20 md:py-24">
-            <div className="flex w-full max-w-7xl flex-col items-start gap-20">
+            <div className="flex w-full max-w-7xl flex-col items-start gap-10 lg:gap-20">
                 <SplitLinesReveal
                     stagger={0.2}
                     className="flex flex-col items-center justify-center md:items-start md:justify-start gap-3"

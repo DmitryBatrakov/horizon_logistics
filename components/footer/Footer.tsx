@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SectionId } from "../header/Header";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { handleNavigateToSection } from "@/lib/utils";
 
 export const Footer = () => {
     const t = useTranslations();
@@ -17,24 +18,6 @@ export const Footer = () => {
         { id: "process", label: t("footer.links.process") },
         { id: "contact", label: t("footer.links.contact") },
     ];
-
-    const handleNavigateToSection = (sectionId: string) => {
-        if (pathname === "/") {
-            const element = document.getElementById(sectionId);
-
-            if (element) {
-                element.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                });
-            }
-
-            return;
-        }
-
-        sessionStorage.setItem("scrollToSection", sectionId);
-        router.push("/");
-    };
 
     const contactItems = [
         {
@@ -82,7 +65,7 @@ export const Footer = () => {
                                     <li key={item.label}>
                                         <button
                                             type="button"
-                                            onClick={() => handleNavigateToSection(item.id)}
+                                            onClick={() => handleNavigateToSection(item.id, pathname, router )}
                                             className="cursor-pointer text-base text-white/70 transition-colors hover:text-button-foreground"
                                         >
                                             {item.label}

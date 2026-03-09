@@ -38,12 +38,11 @@ export default async function ServicePage({
 
     const { locale } = await params;
 
-    console.log("locale: ", locale);
-
     const t = await getTranslations("servicePages");
+    const tUi = await getTranslations("servicePageUi");
 
     return (
-        <section className="w-full min-h-screen relative overflow-hidden bg-white z-10">
+        <section className="w-full min-h-screen relative overflow-hidden bg-white z-10 shadow-2xl shadow-black/20">
             <div className="relative min-h-[60vh] flex flex-col items-center justify-center">
                 <Image
                     src={servicesData[id].image}
@@ -75,7 +74,7 @@ export default async function ServicePage({
                             )}
 
                             <span className="text-sm font-semibold transition-colors group-hover:text-white">
-                                Back to home
+                                {tUi("backToHome")}
                             </span>
                         </Link>
                         <div className="tracking-[0.16em] flex items-center justify-start gap-5 md:gap-8 pt-4 pb-3">
@@ -157,9 +156,9 @@ export default async function ServicePage({
                     </div>
                     <div className="w-full flex items-center justify-center lg:col-span-2 mt-10">
                         <AnimatedButton
-                            text="Request This Service"
+                            text={tUi("requestThisService")}
                             className="hover:text-button e"
-                        ></AnimatedButton>
+                        />
                     </div>
                 </div>
             </div>

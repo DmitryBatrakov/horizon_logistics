@@ -20,7 +20,7 @@ export const ContactUs = async () => {
             className="relative flex  w-full flex-col items-center justify-center overflow-hidden bg-button px-4 py-20 md:py-28 "
         >
             
-            <div className="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center gap-15">
+            <div className="relative z-10 flex w-full max-w-7xl flex-col items-center justify-center gap-10 lg:gap-15">
                 <SplitLinesReveal
                     stagger={0.2}
                     trigger="top 80%"
