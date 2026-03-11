@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
 import { Container, Users, Warehouse } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { useTranslations } from "next-intl";
 import { LocaleDirectionArrow } from "@/shared/local-direction-arrow/LocaleDirectionArrow";
