@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
 import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import { getMetadataForLocale } from "@/lib/metadata/metadata";
 
@@ -23,18 +23,25 @@ const openSans = Open_Sans({
     subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-    const locale = await getLocale();
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
     return getMetadataForLocale(locale);
-  }
+}
 
 
 export default async function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ locale: string }>;
 }>) {
-    const locale = await getLocale();
+    const { locale } = await params;
+    setRequestLocale(locale);
 
     return (
         <html lang={locale} dir={locale === "he" ? "rtl" : "ltr"}>
