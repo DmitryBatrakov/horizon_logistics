@@ -63,7 +63,7 @@ export const MobileNav = () => {
                     <Separator className="mt-4 bg-white/20" />
                 </DrawerHeader>
 
-                <nav className="px-3 pb-2">
+                <nav className="px-3 pb-2 max-w-xl w-full mx-auto">
                     <ul className="space-y-2">
                         {navLinks.map((item) => (
                             <li key={item.id}>
@@ -95,7 +95,7 @@ export const MobileNav = () => {
                     </ul>
                 </nav>
 
-                <DrawerFooter className="mt-auto p-4">
+                <DrawerFooter className="mt-auto p-4 max-w-xl w-full mx-auto">
                     <DrawerClose asChild>
                         <AnimatedButton
                             text={t("mobileNav.close")}
