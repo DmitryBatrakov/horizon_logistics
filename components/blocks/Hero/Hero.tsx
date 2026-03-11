@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import heroBg from "@/assets/hero-bg.jpeg";
+import heroBg from "@/assets/hero-bg.webp";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
