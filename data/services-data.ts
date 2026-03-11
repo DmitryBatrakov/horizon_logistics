@@ -1,15 +1,14 @@
-import heroBg from "@/assets/hero-bg.jpeg";
-import containerUnloadingHero from "@/assets/services-photo/hero-uploading.png";
-import containerUploadingOne from "@/assets/services-photo/uploading-one.png";
-import containerUploadingTwo from "@/assets/services-photo/uploading-two.png";
+import containerUnloadingHero from "@/assets/services-photo/hero-uploading.webp";
+import containerUploadingOne from "@/assets/services-photo/uploading-one.webp";
+import containerUploadingTwo from "@/assets/services-photo/uploading-two.webp";
 
-import factoryHero from '@/assets/services-photo/test.png';
-import factoryOne from '@/assets/services-photo/factory-one.png';
-import factoryTwo from '@/assets/services-photo/factory-two.png';
+import factoryHero from '@/assets/services-photo/hero-factory.webp';
+import factoryOne from '@/assets/services-photo/factory-one.webp';
+import factoryTwo from '@/assets/services-photo/factory-two.webp';
 
-import warehouseHero from '@/assets/services-photo/tet4.png';
-import warehouseOne from '@/assets/services-photo/warehouse-one.png';
-import warehouseTwo from '@/assets/services-photo/warehouse-two.png';
+import warehouseHero from '@/assets/services-photo/hero-warehouse.webp';
+import warehouseOne from '@/assets/services-photo/warehouse-one.webp';
+import warehouseTwo from '@/assets/services-photo/warehouse-two.webp';
 
 
 export const servicesData = {
