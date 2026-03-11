@@ -140,6 +140,7 @@
             "firstName": "First Name",
             "lastName": "Last Name",
             "phone": "Phone Number",
+            "email": "Email",
             "serviceType": "Service Type",
             "servicePlaceholder": "Select a service",
             "message": "Message",
@@ -148,7 +149,10 @@
             "serviceWorkforceStaffing": "Workforce Staffing",
             "serviceWarehouseMaintenance": "Warehouse Maintenance"
         },
-        "submit": "Submit Request"
+        "submitting": "Sending...",
+        "submit": "Submit Request",
+        "success": "Request sent successfully",
+        "error": "Failed to send request"
     },
     "faq": {
         "eyebrow": "questions",
@@ -208,7 +212,7 @@
                 "Damage-free handling guarantee"
             ]
         },
-        "factory-stuffing": {
+        "factory-staffing": {
             "titleHero": "Factory Staffing",
             "subtitleHero": "Reliable workforce solutions for manufacturing plants, tailored to your production needs.",
             "titleService": "Workforce You Can Count On",
@@ -240,5 +244,12 @@
                 "Health and safety documentation provided"
             ]
         }
+    },
+
+    "validation": {
+        "required": "This field is required",
+        "emailInvalid": "Invalid email address",
+        "maxLength": "Maximum {max} characters",
+        "phoneMax": "Maximum 15 characters"
     }
 }

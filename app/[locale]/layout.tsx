@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
 import "../globals.css";
+import { getMetadataForLocale } from "@/lib/metadata/metadata";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -23,13 +24,10 @@ const openSans = Open_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-    const t = await getTranslations("metadata");
+    const locale = await getLocale();
+    return getMetadataForLocale(locale);
+  }
 
-    return {
-        title: t("title"),
-        description: t("description"),
-    };
-}
 
 export default async function RootLayout({
     children,

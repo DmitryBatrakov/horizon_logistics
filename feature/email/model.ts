@@ -7,7 +7,7 @@ export interface EmailPayload {
     phone: string;
     serviceType: ServiceType;
     message?: string;
-    locale: "en" | "he";
+    locale: string;
 }
 
 export type SendEmailResult = { ok: true } | { ok: false; error: string };

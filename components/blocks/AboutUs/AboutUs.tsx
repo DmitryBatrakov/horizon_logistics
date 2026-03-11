@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import aboutUsImage from "@/assets/about-us.jpeg";
+import aboutUsImage from "@/assets/about-us.png";
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ClockCheck, Container, User2, Handshake } from "lucide-react";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
@@ -21,7 +21,7 @@ export const AboutUs = async () => {
             icon: ClockCheck,
         },
         {
-            value: "3,000+",
+            value: "300+",
             label: t("stats.containersMonthly"),
             icon: Container,
         },

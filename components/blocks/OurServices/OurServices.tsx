@@ -8,10 +8,10 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
-import { Container, Users, Warehouse, ArrowRight, ArrowLeft } from "lucide-react";
+import { Container, Users, Warehouse } from "lucide-react";
 import Link from "next/link";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { LocaleDirectionArrow } from "@/shared/local-direction-arrow/LocaleDirectionArrow";
 
 type ServicesProps = {
@@ -24,7 +24,6 @@ type ServicesProps = {
 
 export const OurServices = () => {
     const t = useTranslations("ourServices");
-    const locale = useLocale();
 
 
     const services: ServicesProps[] = [
@@ -36,10 +35,10 @@ export const OurServices = () => {
             icon: Container,
         },
         {
-            id: "factory-stuffing",
+            id: "factory-staffing",
             title: t("items.workforceStaffing.title"),
             description: t("items.workforceStaffing.description"),
-            link: "/services/factory-stuffing",
+            link: "/services/factory-staffing",
             icon: Users,
         },
         {

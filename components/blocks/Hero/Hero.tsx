@@ -27,8 +27,8 @@ export const Hero = () => {
                 priority
             />
 
-            <div className="absolute inset-0 bg-linear-to-t from-button/55 via-button/40 to-button/25 z-10" />
-            <div className="absolute inset-0 bg-linear-to-r from-button/55 via-button/15 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-button/45 via-button/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-r from-button/40 via-button/25 to-transparent z-10" />
             <div className="absolute inset-0 z-20 flex flex-col items-start justify-center max-w-7xl mx-auto w-full p-5 px-4md:px-10 gap-8">
                 <SplitLinesReveal
                     stagger={0.2}
