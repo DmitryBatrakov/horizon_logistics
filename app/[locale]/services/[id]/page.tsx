@@ -73,7 +73,9 @@ export async function generateMetadata({
             card: "summary_large_image",
             title,
             description,
-            images: [baseUrl ? `${baseUrl}/twitter-image.png` : "/twitter-image.png"],
+            images: [
+                baseUrl ? `${baseUrl}/twitter-image.png` : "/twitter-image.png",
+            ],
         },
     };
 }
@@ -98,6 +100,9 @@ export default async function ServicePage({
                     alt={t(`${servicesData[id].i18nKey}.titleService`)}
                     fill
                     className="object-cover h-ful w-full rounded-2xl md:rounded-b-[80px]"
+                    priority
+                    sizes="100vw"
+                    placeholder="blur"
                 />
 
                 {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/35 to-transparent z-10 rounded-2xl md:rounded-b-[80px]" /> */}
@@ -129,7 +134,7 @@ export default async function ServicePage({
                         </Link>
                         <div className="tracking-[0.16em] flex items-center justify-start gap-5 md:gap-8 pt-4 pb-3">
                             <div className="w-10 h-10 md:w-16 md:h-16 bg-button-foreground rounded-md flex items-center justify-center">
-                                <Container  className="text-black w-6 h-6 md:w-10 md:h-10" />
+                                <Container className="text-black w-6 h-6 md:w-10 md:h-10" />
                             </div>
                             <h1 className="text-3xl md:text-5xl font-bold text-white flex items-center justify-center gap-2">
                                 {t(`${servicesData[id].i18nKey}.titleHero`)}
