@@ -45,15 +45,15 @@ export const Faq = async () => {
     return (
         <section
             id="faq"
-            className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-28 "
+            className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-28 shadow-2xl shadow-black/20"
         >
-            <div className="flex w-full max-w-3xl flex-col items-center gap-10">
+            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-5 lg:gap-15">
                 <SplitLinesReveal
                     stagger={0.2}
-                    className="flex flex-col items-center gap-2 text-center"
+                    className="flex flex-col items-center gap-2 "
                 >
-                    <h2 className="text-md font-semibold uppercase text-button-foreground">
-                        {t("eyebrow")}
+                    <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
+                        Faq
                     </h2>
                     <p className="text-4xl font-bold text-button md:text-6xl">
                         {t("title")}
@@ -63,18 +63,18 @@ export const Faq = async () => {
                     <Accordion
                         type="single"
                         collapsible
-                        className="w-full rounded-xl border bg-white px-6 py-4 md:px-8"
+                        className="w-full rounded-xl border-none bg-transparent "
                     >
                         {faqItems.map((item, index) => (
                             <AccordionItem
                                 key={item.question}
                                 value={`item-${index + 1}`}
-                                className="border-border py-1"
+                                className="border-border py-1 group"
                             >
-                                <AccordionTrigger className="text-base font-semibold text-button hover:no-underline md:text-lg">
+                                <AccordionTrigger className="px-2 text-base font-semibold text-button hover:no-underline md:text-lg hover:bg-button-foreground hover:text-white transition-all duration-300">
                                     {item.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-sm leading-6 text-button/80 md:text-base">
+                                <AccordionContent className="px-2 text-sm leading-6 text-button/80 md:text-base">
                                     {item.answer}
                                 </AccordionContent>
                             </AccordionItem>

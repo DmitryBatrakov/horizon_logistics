@@ -41,15 +41,15 @@ export const Process = async () => {
 
     return (
         <section
-            className="relative flex min-h-screen w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 "
+            className="relative flex h-full w-full items-center justify-center bg-secondary px-4 py-20 md:py-24 "
             id="process"
         >
-            <div className="flex w-full max-w-7xl flex-col items-center gap-12">
-                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col items-center gap-3 text-center">
+            <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:gap-20">
+                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col items-start justify-start gap-12 ">
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
                     </h2>
-                    <p className="text-4xl font-bold text-button md:text-6xl">
+                    <p className="text-4xl font-bold text-button md:text-6xl pb-2">
                         {t("title")}
                     </p>
                     <p className="max-w-2xl text-base text-button/70">
@@ -67,7 +67,7 @@ export const Process = async () => {
                             delay={0.1}
                             duration={0.25}
                             key={step.number}
-                            className="relative flex flex-col items-center justify-start gap-2 text-center"
+                            className="relative flex flex-col items-center justify-start gap-2 "
                         >
                             <div className="relative mb-6">
                                 <div className="flex size-16 items-center justify-center rounded-full border-2 border-button-foreground bg-white shadow-sm">
@@ -78,11 +78,11 @@ export const Process = async () => {
                                 </span>
                             </div>
 
-                            <div className="flex flex-col items-center justify-start">
-                                <h3 className="text-3xl font-semibold text-button">
+                            <div className="flex flex-col items-center justify-center">
+                                <h3 className="text-3xl font-semibold text-button text-center">
                                     {step.title}
                                 </h3>
-                                <p className="mt-3 max-w-72 text-lg leading-7 text-button/70">
+                                <p className="mt-3 max-w-72 text-lg leading-7 text-button/70 text-center">
                                     {step.description}
                                 </p>
                             </div>
