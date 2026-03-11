@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { servicesData } from "@/data/services-data";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
@@ -83,13 +83,12 @@ export default async function ServicePage({
 }: {
     params: Promise<{ locale: string; id: string }>;
 }) {
-    const { id: rawId } = await params;
+    const { locale, id: rawId } = await params;
     const id = assertServiceId(rawId);
+    setRequestLocale(locale);
 
-    const { locale } = await params;
-
-    const t = await getTranslations("servicePages");
-    const tUi = await getTranslations("servicePageUi");
+    const t = await getTranslations({ locale, namespace: "servicePages" });
+    const tUi = await getTranslations({ locale, namespace: "servicePageUi" });
 
     return (
         <section className="w-full min-h-screen relative overflow-hidden bg-white z-10 shadow-2xl shadow-black/20">
