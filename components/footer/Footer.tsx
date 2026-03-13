@@ -38,7 +38,7 @@ export const Footer = () => {
     ];
 
     return (
-        <footer className="relative flex w-full items-center justify-center bg-button px-4 py-12 md:py-14">
+        <footer className="relative flex w-full items-center justify-center bg-button px-4 py-6 md:py-14">
             <div className="w-full max-w-7xl">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-2  md:gap-8">
                     <div className="space-y-4">
