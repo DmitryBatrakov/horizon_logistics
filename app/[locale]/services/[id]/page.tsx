@@ -7,6 +7,7 @@ import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { ArrowLeft, ArrowRight, Container, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
+import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
 
 const SERVICE_IDS = [
     "container-unloading",
@@ -112,8 +113,7 @@ export default async function ServicePage({
                     className={`absolute hidden md:block inset-0 ${locale === "he" ? "bg-linear-to-l" : "bg-linear-to-r"} from-black/60 via-black/55 to-transparent z-10 md:rounded-b-[80px]`}
                 />
                 <div className="absolute inset-0 z-20 flex flex-col items-start justify-center max-w-7xl mx-auto w-full gap-8 px-6 md:px-2 ">
-                    <SplitLinesReveal
-                        stagger={0.2}
+                    <Reveal
                         className="flex flex-col items-start justify-center w-full lg:mt-10"
                     >
                         <Link
@@ -147,7 +147,7 @@ export default async function ServicePage({
                         <div className="text-white/80 text-sm md:text-base font-semibold ">
                             {t(`${servicesData[id].i18nKey}.subtitleHero`)}
                         </div>
-                    </SplitLinesReveal>
+                    </Reveal>
                 </div>
             </div>
             <div className="min-h-screen w-full flex items-start justify-center py-20">

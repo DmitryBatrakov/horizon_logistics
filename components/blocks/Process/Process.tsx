@@ -1,7 +1,6 @@
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
 import { getTranslations } from "next-intl/server";
 import { CheckCircle2, ClipboardList, PhoneCall, Truck } from "lucide-react";
-import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 
 type ProcessStep = {
     number: string;
@@ -45,7 +44,7 @@ export const Process = async () => {
             id="process"
         >
             <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-10 lg:gap-20">
-                <SplitLinesReveal stagger={0.2} delay={0.2} className="flex flex-col items-start justify-start gap-12 ">
+                <Reveal className="flex flex-col items-start justify-start gap-3 ">
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
                     </h2>
@@ -55,7 +54,7 @@ export const Process = async () => {
                     <p className="max-w-2xl text-base text-button/70">
                         {t("description")}
                     </p>
-                </SplitLinesReveal>
+                </Reveal>
 
                 <div className="relative grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
                     <div className="absolute left-[12.5%] right-[12.5%] top-7 hidden h-px bg-button/15 xl:block" />

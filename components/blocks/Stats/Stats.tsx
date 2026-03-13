@@ -54,9 +54,8 @@ export const Stats = async () => {
     return (
         <section className="relative flex  w-full items-center justify-center bg-button px-4 py-20 md:py-24">
             <div className="flex w-full max-w-7xl flex-col items-start gap-10 lg:gap-20">
-                <SplitLinesReveal
-                    stagger={0.2}
-                    className="flex flex-col items-center justify-center md:items-start md:justify-start gap-3"
+                <Reveal
+                    className="flex flex-col items-start justify-start gap-3"
                 >
                     <h2 className="text-md font-semibold uppercase tracking-[0.16em] text-button-foreground">
                         {t("eyebrow")}
@@ -64,7 +63,7 @@ export const Stats = async () => {
                     <p className="text-4xl font-bold text-white md:text-6xl">
                         {t("title")}
                     </p>
-                </SplitLinesReveal>
+                </Reveal>
 
                 <div className="grid w-full grid-cols-2 gap-10 md:grid-cols-2 lg:grid-cols-3">
                     {stats.map((item, index) => (

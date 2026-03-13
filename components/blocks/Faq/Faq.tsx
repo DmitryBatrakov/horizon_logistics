@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import { getTranslations } from "next-intl/server";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
-import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 
 type FaqItem = {
     question: string;
@@ -44,8 +43,7 @@ export const Faq = async () => {
             className="flex w-full items-center justify-center bg-secondary px-4 py-20 md:py-28 shadow-2xl shadow-black/20"
         >
             <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-5 lg:gap-15">
-                <SplitLinesReveal
-                    stagger={0.2}
+                <Reveal
                     className="flex flex-col items-center gap-2 "
                 >
                     <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
@@ -54,7 +52,7 @@ export const Faq = async () => {
                     <p className="text-4xl font-bold text-button md:text-6xl">
                         {t("title")}
                     </p>
-                </SplitLinesReveal>
+                </Reveal>
                 <Reveal delay={0.2} duration={0.25} className="w-full">
                     <Accordion
                         type="single"

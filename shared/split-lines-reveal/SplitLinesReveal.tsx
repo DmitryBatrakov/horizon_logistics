@@ -28,34 +28,30 @@ export function SplitLinesReveal({
 }: SplitLinesRevealProps) {
     const root = useRef<HTMLDivElement | null>(null);
 
-    useGSAP(
-        () => {
-            SplitText.create(".split-target", {
-                type: "lines",
-                autoSplit: true,
-                onSplit(self) {
-                    return gsap.from(self.lines, {
-                        yPercent: 100,
-                        autoAlpha: 0,
-                        duration,
-                        delay,
-                        stagger,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: root.current,
-                            start: trigger,
-                            toggleActions: "play none none none",
-                        },
-                    });
-                },
-            });
-        },
-        { scope: root },
-    );
+    useGSAP(() => {
+        const target = root.current?.querySelector(".split-target");
+        if (!target) return;
+      
+        const split = SplitText.create(target, { type: "lines", autoSplit: true });
+        const anim = gsap.from(split.lines, {
+            yPercent: 100,
+            autoAlpha: 0,
+            duration,
+            delay,
+            stagger,
+            ease: "power3.out",
+            scrollTrigger: { trigger: root.current, start: trigger, toggleActions: "play none none none" },
+        });
+      
+        return () => {
+          anim.kill();
+          split.revert();
+        };
+      }, { scope: root });
 
     return (
         <div ref={root} className={cn(className)}>
-            <div className="split-target">{children}</div>
+            <div className="split-target w-full">{children}</div>
         </div>
     );
 }
