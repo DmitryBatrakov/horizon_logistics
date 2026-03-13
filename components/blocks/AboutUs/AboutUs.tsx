@@ -42,9 +42,8 @@ export const AboutUs = async () => {
             id="about-us"
             className="flex items-center justify-center w-full bg-secondary  px-4 py-20 md:py-28"
         >
-            <div className="flex flex-col items-start:justify-start max-w-7xl gap-10 md:gap-15">
-                <SplitLinesReveal
-                    stagger={0.2}
+            <Reveal className="flex flex-col items-start:justify-start max-w-7xl gap-10 md:gap-15">
+                <div
                     className="flex flex-col gap-2 items-start  justify-start h-full"
                 >
                     <h2 className="text-md font-semibold uppercase text-button-foreground tracking-[0.16em]">
@@ -53,11 +52,10 @@ export const AboutUs = async () => {
                     <p className=" text-5xl md:text-6xl text-button font-bold ">
                         {t("title")}
                     </p>
-                </SplitLinesReveal>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start justify-center">
-                    <Reveal
-                        delay={0.2}
+                    <div
                         className="flex flex-col items-center justify-center gap-10"
                     >
                         <div>
@@ -96,9 +94,8 @@ export const AboutUs = async () => {
                                 </Reveal>
                             ))}
                         </div>
-                    </Reveal>
-                    <Reveal
-                        delay={0.2}
+                    </div>
+                    <div
                         className="relative w-full min-h-[500px] h-full rounded-lg overflow-hidden"
                     >
                         <Image
@@ -107,9 +104,9 @@ export const AboutUs = async () => {
                             className="object-cover"
                             fill
                         />
-                    </Reveal>
+                    </div>
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 };
