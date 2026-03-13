@@ -157,12 +157,14 @@
     * {
         @apply border-border outline-ring/50;
         font-family: var(--font-open-sans);
+        scroll-behavior: smooth;
     }
     body {
         @apply bg-background text-foreground;
     }
-    /* body[data-scroll-locked] {
-        margin-right: 0 !important;
-    } */
-    
+}
+
+
+html {
+  scroll-snap-type: y mandatory;
 }

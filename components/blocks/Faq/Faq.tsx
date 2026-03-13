@@ -33,10 +33,6 @@ export const Faq = async () => {
             answer: t("items.trainedAnswer"),
         },
         {
-            question: t("items.factoriesQuestion"),
-            answer: t("items.factoriesAnswer"),
-        },
-        {
             question: t("items.requestQuestion"),
             answer: t("items.requestAnswer"),
         },

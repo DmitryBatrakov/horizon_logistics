@@ -99,14 +99,17 @@ export default async function ServicePage({
                     src={servicesData[id].image}
                     alt={t(`${servicesData[id].i18nKey}.titleService`)}
                     fill
-                    className="object-cover h-ful w-full rounded-2xl md:rounded-b-[80px]"
+                    className="object-cover h-ful w-full rounded-b-[40px] md:rounded-b-[80px]"
                     priority
                     sizes="100vw"
                     placeholder="blur"
                 />
 
                 <div
-                    className={`absolute inset-0 ${locale === "he" ? "bg-linear-to-l" : "bg-linear-to-r"} from-black/60 via-black/55 to-transparent z-10 rounded-2xl md:rounded-b-[80px]`}
+                    className={`absolute inset-0 block md:hidden bg-black/40 from-black/60 via-black/55 to-transparent z-10 rounded-b-[40px] md:rounded-b-[80px]`}
+                />
+                <div
+                    className={`absolute hidden md:block inset-0 ${locale === "he" ? "bg-linear-to-l" : "bg-linear-to-r"} from-black/60 via-black/55 to-transparent z-10 md:rounded-b-[80px]`}
                 />
                 <div className="absolute inset-0 z-20 flex flex-col items-start justify-center max-w-7xl mx-auto w-full gap-8 px-6 md:px-2 ">
                     <SplitLinesReveal
@@ -133,7 +136,7 @@ export default async function ServicePage({
                                 {tUi("backToHome")}
                             </span>
                         </Link>
-                        <div className="tracking-[0.16em] flex items-center justify-start gap-5 md:gap-8 pt-4 pb-3">
+                        <div className="tracking-[0.16em] flex items-center justify-start gap-2 md:gap-8 pt-4 pb-3">
                             <div className="w-10 h-10 md:w-16 md:h-16 bg-button-foreground rounded-md flex items-center justify-center">
                                 <Container className="text-black w-6 h-6 md:w-10 md:h-10" />
                             </div>
