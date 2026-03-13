@@ -34,7 +34,7 @@ export const ContactForm = () => {
             firstName: "",
             lastName: "",
             phone: "",
-            serviceType: "container-unloading",
+            serviceType: "",
             message: "",
             email: "",
             locale: locale as Locale,
@@ -67,6 +67,7 @@ export const ContactForm = () => {
                             {t("fields.firstName")}
                             <Input
                                 type="text"
+                                placeholder={t("fields.firstNamePlaceholder")}
                                 {...register("firstName")}
                                 className="h-11 border-border bg-background text-sm text-button placeholder:text-muted-foreground/80 focus-visible:border-button-foreground/60 focus-visible:ring-button-foreground/30 dark:bg-background"
                             />
@@ -81,6 +82,7 @@ export const ContactForm = () => {
                             {t("fields.lastName")}
                             <Input
                                 type="text"
+                                placeholder={t("fields.lastNamePlaceholder")}
                                 {...register("lastName")}
                                 className="h-11 border-border bg-background text-sm text-button placeholder:text-muted-foreground/80 focus-visible:border-button-foreground/60 focus-visible:ring-button-foreground/30 dark:bg-background"
                             />
@@ -95,6 +97,7 @@ export const ContactForm = () => {
                             {t("fields.phone")}
                             <Input
                                 type="tel"
+                                placeholder={t("fields.phonePlaceholder")}
                                 {...register("phone")}
                                 className="h-11 border-border bg-background text-sm text-button placeholder:text-muted-foreground/80 focus-visible:border-button-foreground/60 focus-visible:ring-button-foreground/30 dark:bg-background"
                             />
@@ -109,6 +112,7 @@ export const ContactForm = () => {
                             {t("fields.email")}
                             <Input
                                 type="email"
+                                placeholder={t("fields.emailPlaceholder")}
                                 {...register("email")}
                                 className="h-11 border-border bg-background text-sm text-button placeholder:text-muted-foreground/80 focus-visible:border-button-foreground/60 focus-visible:ring-button-foreground/30 dark:bg-background"
                             />
@@ -126,7 +130,7 @@ export const ContactForm = () => {
                                 name="serviceType"
                                 render={({ field }) => (
                                     <Select
-                                        value={field.value}
+                                        value={field.value || undefined}
                                         onValueChange={field.onChange}
                                     >
                                         <SelectTrigger className="h-11 w-full border-border bg-background text-sm text-button focus-visible:border-button-foreground/60 focus-visible:ring-button-foreground/30 dark:bg-background">
@@ -156,6 +160,13 @@ export const ContactForm = () => {
                                     </Select>
                                 )}
                             />
+                            {errors.serviceType && (
+                                <span className="text-xs font-normal text-red-500">
+                                    {tValidation(
+                                        errors.serviceType.message as string,
+                                    )}
+                                </span>
+                            )}
                         </label>
 
                         <label className="col-span-full flex flex-col gap-2 text-sm font-semibold text-button">

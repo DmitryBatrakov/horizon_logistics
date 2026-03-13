@@ -14,15 +14,11 @@ import { Separator } from "@/components/ui/separator";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { useTranslations } from "next-intl";
 import { SectionId } from "../header/Header";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { useRef } from "react";
+import { Link } from "@/i18n/navigation";
 import { LocaleDirectionArrow } from "../../shared/local-direction-arrow/LocaleDirectionArrow";
 
 export const MobileNav = () => {
     const t = useTranslations();
-    const router = useRouter();
-    const pathname = usePathname();
-    const pendingSectionRef = useRef<SectionId | null>(null);
 
     const navLinks: { id: SectionId; label: string }[] = [
         { id: "services", label: t("header.links.services") },
@@ -41,16 +37,6 @@ export const MobileNav = () => {
 
             <DrawerContent
                 className="min-h-[70vh] border-none bg-button text-white"
-                onTransitionEnd={() => {
-                    if (pendingSectionRef.current && pathname === "/") {
-                        const id = pendingSectionRef.current;
-                        pendingSectionRef.current = null;
-                        document.getElementById(id)?.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    }
-                }}
             >
                 <DrawerHeader className="px-5 pt-6 pb-3">
                     <DrawerTitle className=" text-white text-2xl font-bold tracking-tight">
@@ -67,27 +53,15 @@ export const MobileNav = () => {
                         {navLinks.map((item) => (
                             <li key={item.id}>
                                 <DrawerClose asChild>
-                                    <button
-                                        type="button"
-                                        onClick={() => {
-                                            if (pathname === "/") {
-                                                pendingSectionRef.current =
-                                                    item.id;
-                                                return;
-                                            }
-                                            sessionStorage.setItem(
-                                                "scrollToSection",
-                                                item.id,
-                                            );
-                                            router.push("/");
-                                        }}
+                                    <Link
+                                        href={`/#${item.id}`}
                                         className="group flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-semibold transition-all hover:bg-white/10 active:scale-[0.98] "
                                     >
                                         <span className="text-white group-hover:text-button-foreground transition-colors active:text-button-foreground">
                                             {item.label}
                                         </span>
                                         <LocaleDirectionArrow className="transition-colors group-hover:text-button-foreground" />
-                                    </button>
+                                    </Link>
                                 </DrawerClose>
                             </li>
                         ))}

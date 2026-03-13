@@ -4,13 +4,9 @@ import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SectionId } from "../header/Header";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { handleNavigateToSection } from "@/lib/utils";
 
 export const Footer = () => {
     const t = useTranslations();
-    const pathname = usePathname();
-    const router = useRouter();
 
     const navLinks: { id: SectionId; label: string }[] = [
         { id: "services", label: t("footer.links.services") },
@@ -63,13 +59,12 @@ export const Footer = () => {
                             <ul className="space-y-2">
                                 {navLinks.map((item) => (
                                     <li key={item.label}>
-                                        <button
-                                            type="button"
-                                            onClick={() => handleNavigateToSection(item.id, pathname, router )}
+                                        <Link
+                                            href={`/#${item.id}`}
                                             className="cursor-pointer text-base text-white/70 transition-colors hover:text-button-foreground"
                                         >
                                             {item.label}
-                                        </button>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

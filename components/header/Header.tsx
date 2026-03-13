@@ -1,23 +1,18 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
-import { cn, handleNavigateToSection } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { MobileNav } from "../mobile-nav/MobileNav";
 import { LocaleSwitcher } from "../locale-switcher/locale-switcher";
-import { usePathname, useRouter } from "@/i18n/navigation";
 
 export type SectionId = "services" | "about-us" | "process" | "contact" | "faq";
 
 export const Header = () => {
     const t = useTranslations();
     const direction = useScrollDirection();
-    const pathname = usePathname();
-    const router = useRouter();
-
-    
 
     const navLinks: { id: SectionId; label: string }[] = [
         { id: "services", label: t("header.links.services") },
@@ -46,14 +41,13 @@ export const Header = () => {
                 </Link>
                 <div className="flex items-center justify-center gap-15">
                     {navLinks.map((link) => (
-                        <button
+                        <Link
                             key={link.id}
-                            type="button"
-                            onClick={() => handleNavigateToSection(link.id, pathname, router )}
+                            href={`/#${link.id}`}
                             className="cursor-pointer text-sm font-semibold text-white transition-colors hover:text-button-foreground"
                         >
                             {link.label}
-                        </button>
+                        </Link>
                     ))}
                 </div>
                 <div className="flex items-center justify-center gap-5">
@@ -61,9 +55,7 @@ export const Header = () => {
 
                     <AnimatedButton
                         text={t("header.contactCta")}
-                        onClick={() => {
-                            handleNavigateToSection("contact", pathname, router );
-                        }}
+                        href="/#contact"
                     ></AnimatedButton>
                 </div>
             </nav>

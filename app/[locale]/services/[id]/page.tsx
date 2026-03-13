@@ -117,7 +117,7 @@ export default async function ServicePage({
                         className="flex flex-col items-start justify-center w-full lg:mt-10"
                     >
                         <Link
-                            href={`/`}
+                            href={`/#services`}
                             className="group flex items-center justify-start gap-3 text-button-foreground hover:bg-transparent mr-5"
                         >
                             {locale === "en" ? (
@@ -216,7 +216,8 @@ export default async function ServicePage({
                     <div className="w-full flex items-center justify-center lg:col-span-2 mt-10 ">
                         <AnimatedButton
                             text={tUi("requestThisService")}
-                            className="hover:text-button e"
+                            className="hover:text-button"
+                            href={`/#contact`}
                         />
                     </div>
                 </div>
