@@ -138,9 +138,13 @@
         "title": "Request a Quote",
         "fields": {
             "firstName": "First Name",
+            "firstNamePlaceholder": "Enter your first name",
             "lastName": "Last Name",
+            "lastNamePlaceholder": "Enter your last name",
             "phone": "Phone Number",
+            "phonePlaceholder": "Enter your phone number",
             "email": "Email",
+            "emailPlaceholder": "Enter your email",
             "serviceType": "Service Type",
             "servicePlaceholder": "Select a service",
             "message": "Message",
@@ -192,7 +196,7 @@
     },
 
     "servicePageUi": {
-        "backToHome": "Back to home",
+        "backToHome": "Back to services",
         "requestThisService": "Request This Service"
     },
     "servicePages": {
@@ -250,6 +254,7 @@
         "required": "This field is required",
         "emailInvalid": "Invalid email address",
         "maxLength": "Maximum {max} characters",
-        "phoneMax": "Maximum 15 characters"
+        "phoneMax": "Maximum 15 characters",
+        "phoneInvalid": "Enter a valid phone number"
     }
 }

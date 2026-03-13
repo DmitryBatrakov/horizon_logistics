@@ -30,9 +30,21 @@ export const sendEmailSchema = z.object({
         .max(30, { message: "validation.maxLength" }),
     phone: z
         .string()
+        .trim()
         .min(1, { message: "validation.required" })
-        .max(15, { message: "validation.maxLength" }),
-    serviceType: serviceTypeSchema,
+        .refine((value) => /^[+\d()\-.\s]+$/.test(value), {
+            message: "validation.phoneInvalid",
+        })
+        .refine((value) => {
+            const digits = value.replace(/\D/g, "");
+            return digits.length >= 7 && digits.length <= 15;
+        }, {
+            message: "validation.phoneInvalid",
+        }),
+    serviceType: z
+        .string()
+        .min(1, { message: "validation.required" })
+        .pipe(serviceTypeSchema),
     message: z
         .string()
         .max(200, { message: "validation.maxLength" })

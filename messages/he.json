@@ -138,9 +138,13 @@
         "title": "בקשת הצעת מחיר",
         "fields": {
             "firstName": "שם פרטי",
+            "firstNamePlaceholder": "הזינו שם פרטי",
             "lastName": "שם משפחה",
+            "lastNamePlaceholder": "הזינו שם משפחה",
             "phone": "מספר טלפון",
+            "phonePlaceholder": "הזינו מספר טלפון",
             "email": "אימייל",
+            "emailPlaceholder": "הזינו כתובת אימייל",
             "serviceType": "סוג השירות",
             "servicePlaceholder": "בחרו שירות",
             "message": "הודעה",
@@ -191,7 +195,7 @@
         }
     },
     "servicePageUi": {
-        "backToHome": "חזרה לדף הבית",
+        "backToHome": "חזרה לשירותים",
         "requestThisService": "הזמן שירות זה"
     },
     "servicePages": {
@@ -248,6 +252,7 @@
         "required": "שדה חובה",
         "emailInvalid": "כתובת אימייל לא תקינה",
         "maxLength": "מקסימום {max} תווים",
-        "phoneMax": "מקסימום 15 תווים"
+        "phoneMax": "מקסימום 15 תווים",
+        "phoneInvalid": "יש להזין מספר טלפון תקין"
     }
 }

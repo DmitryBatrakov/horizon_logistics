@@ -7,14 +7,11 @@ import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
 import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { useLocale } from "next-intl";
-import { cn, handleNavigateToSection } from "@/lib/utils";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 
 export const Hero = () => {
     const t = useTranslations("hero");
     const locale = useLocale();
-    const pathname = usePathname();
-    const router = useRouter();
 
     return (
         <section className="w-full min-h-screen relative overflow-hidden">
@@ -54,9 +51,7 @@ export const Hero = () => {
                     <div className="flex gap-5">
                         <AnimatedButton
                             text={t("cta")}
-                            onClick={() => {
-                                handleNavigateToSection("contact", pathname, router );
-                            }}
+                            href="/#contact"
                         />
                     </div>
                 </Reveal>

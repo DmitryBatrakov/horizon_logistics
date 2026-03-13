@@ -50,8 +50,6 @@ export const OurServices = () => {
         },
     ];
 
-    // const Arrow = dir = "rtl" ? ArrowLeft : ArrowRight;
-
     return (
         <section
             className="flex items-center justify-center w-full bg-white"
@@ -94,6 +92,7 @@ export const OurServices = () => {
                                 <CardFooter className="flex items-center w-full justify-start mt-auto">
                                     <Link
                                         href={s.link}
+                                        scroll={true}
                                         className="flex items-center justify-between gap-1 text-button font-semibold text-sm group-hover:gap-2 group-hover:text-button-foreground transition-all duration-300"
                                     >
                                         <p>{t("learnMore")} </p>

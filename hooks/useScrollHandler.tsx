@@ -2,11 +2,14 @@
 
 import { useEffect } from "react";
 
+
+
 export function HomeScrollHandler() {
     useEffect(() => {
-        const sectionId = sessionStorage.getItem("scrollToSection");
+        const hash = window.location.hash;
+        if (!hash) return;
+        const sectionId = decodeURIComponent(hash.slice(1));
         if (!sectionId) return;
-        sessionStorage.removeItem("scrollToSection");
 
         const scroll = () => {
             document.getElementById(sectionId)?.scrollIntoView({
