@@ -23,7 +23,6 @@ export const MobileNav = () => {
     const router = useRouter();
     const pathname = usePathname();
     const pendingSectionRef = useRef<SectionId | null>(null);
-    
 
     const navLinks: { id: SectionId; label: string }[] = [
         { id: "services", label: t("header.links.services") },
@@ -41,7 +40,7 @@ export const MobileNav = () => {
             </DrawerTrigger>
 
             <DrawerContent
-                className="min-h-screen border-none bg-button text-white"
+                className="min-h-[70vh] border-none bg-button text-white"
                 onTransitionEnd={() => {
                     if (pendingSectionRef.current && pathname === "/") {
                         const id = pendingSectionRef.current;

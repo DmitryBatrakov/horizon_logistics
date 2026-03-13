@@ -105,14 +105,13 @@ export default async function ServicePage({
                     placeholder="blur"
                 />
 
-                {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/35 to-transparent z-10 rounded-2xl md:rounded-b-[80px]" /> */}
                 <div
-                    className={`absolute inset-0 ${locale === "he" ? "bg-linear-to-l" : "bg-linear-to-r"} from-black/40 via-black/40 to-transparent z-10 rounded-2xl md:rounded-b-[80px]`}
+                    className={`absolute inset-0 ${locale === "he" ? "bg-linear-to-l" : "bg-linear-to-r"} from-black/60 via-black/55 to-transparent z-10 rounded-2xl md:rounded-b-[80px]`}
                 />
-                <div className="absolute inset-0 z-20 flex flex-col items-start justify-center max-w-7xl mx-auto w-full gap-8 px-6 md:px-2 mt-10">
+                <div className="absolute inset-0 z-20 flex flex-col items-start justify-center max-w-7xl mx-auto w-full gap-8 px-6 md:px-2 ">
                     <SplitLinesReveal
                         stagger={0.2}
-                        className="flex flex-col items-start justify-center w-full mt-10"
+                        className="flex flex-col items-start justify-center w-full lg:mt-10"
                     >
                         <Link
                             href={`/`}
@@ -211,7 +210,7 @@ export default async function ServicePage({
                             />
                         </div>
                     </div>
-                    <div className="w-full flex items-center justify-center lg:col-span-2 mt-10">
+                    <div className="w-full flex items-center justify-center lg:col-span-2 mt-10 ">
                         <AnimatedButton
                             text={tUi("requestThisService")}
                             className="hover:text-button e"
