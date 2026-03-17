@@ -8,7 +8,6 @@ import {
     Truck,
     Users,
 } from "lucide-react";
-import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 
 type StatItem = {
     value: string;

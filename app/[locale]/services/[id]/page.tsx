@@ -3,11 +3,11 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { servicesData } from "@/data/services-data";
-import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { ArrowLeft, ArrowRight, Container, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
+import { PageWrapper } from "./PageWrapper";
 
 const SERVICE_IDS = [
     "container-unloading",
@@ -94,6 +94,7 @@ export default async function ServicePage({
     const tUi = await getTranslations({ locale, namespace: "servicePageUi" });
 
     return (
+        <PageWrapper>
         <section className="w-full min-h-screen relative overflow-hidden bg-white z-10 shadow-2xl shadow-black/20">
             <div className="relative min-h-[60vh] flex flex-col items-center justify-center">
                 <Image
@@ -223,5 +224,6 @@ export default async function ServicePage({
                 </div>
             </div>
         </section>
+        </PageWrapper>
     );
 }
