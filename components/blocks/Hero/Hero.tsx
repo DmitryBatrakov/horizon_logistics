@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import heroBg from "@/assets/hero-bg.webp";
 import { AnimatedButton } from "@/shared/animated-button/animated-button";
 import { Reveal } from "@/shared/reveal-on-scroll/reveal-on-scroll";
-import { SplitLinesReveal } from "@/shared/split-lines-reveal/SplitLinesReveal";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
