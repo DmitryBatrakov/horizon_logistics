@@ -2,11 +2,12 @@
 
 import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SectionId } from "../header/Header";
 
 export const Footer = () => {
     const t = useTranslations();
+    const locale = useLocale();
 
     const navLinks: { id: SectionId; label: string }[] = [
         { id: "services", label: t("footer.links.services") },
@@ -19,12 +20,12 @@ export const Footer = () => {
         {
             icon: Phone,
             text: t("footer.contactItems.phone"),
-            href: "tel:+15551234567",
+            href: "tel:972 53 963 85 11",
         },
         {
             icon: Mail,
             text: t("footer.contactItems.email"),
-            href: "mailto:info@horizonlogistics.com",
+            href: "mailto:arturkrumer@123gmail.com",
         },
         {
             icon: MapPin,
@@ -51,7 +52,7 @@ export const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10" >
                         <div className="space-y-3">
                             <h3 className="text-xl font-semibold text-white">
                                 {t("footer.quickLinks")}
@@ -82,9 +83,9 @@ export const Footer = () => {
                                             className="group inline-flex items-start gap-3 text-white/70 transition-colors hover:text-button-foreground"
                                         >
                                             <item.icon className="mt-1 size-4 shrink-0 text-button-foreground/80 group-hover:text-button-foreground" />
-                                            <span className="text-base leading-6">
+                                            <p className="text-base leading-6" dir={locale === "he" ? "ltr" : "ltr"}>
                                                 {item.text}
-                                            </span>
+                                            </p>
                                         </Link>
                                     </li>
                                 ))}
